@@ -25,22 +25,28 @@ def find_mismatch(text):
 
 def main():
     input_type = input("Enter F to use test files, or I to input brackets: ")
-    if input_type == "F":
-        file_number = input("Enter file number: ")
-        input_file_name = f"test/{file_number}"
-        output_file_name = f"test/{file_number}.a"
+    if input_type.isdigit():
+        file_num = int(input_type)
+        input_file_name = f"test/{file_num}"
+        output_file_name = f"{file_num}.a"
+    elif input_type == "F":
+        file_num = input("Enter test file number (0-5): ")
+        input_file_name = f"test/{file_num}"
+        output_file_name = f"{file_num}.a"
     elif input_type == "I":
         text = input("Enter brackets: ")
-        mismatch = find_mismatch(text)
-        print(mismatch)
+        result = find_mismatch(text)
+        print(result)
         return
     else:
         print("Invalid input type.")
         return
+
     with open(input_file_name, "r") as input_file, open(output_file_name, "w") as output_file:
         text = input_file.read().strip()
         mismatch = find_mismatch(text)
-        output_file.write(str(mismatch) + "\n")
+        output_file.write(str(mismatch))
+        print(mismatch)
 
 if __name__ == "__main__":
     main()
