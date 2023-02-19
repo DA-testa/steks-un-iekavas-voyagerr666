@@ -29,7 +29,7 @@ def main():
     if input_type == "F":
         file_num = input("Enter test file number (0-5): ")
         input_file_name = f"test/{file_num}"
-        output_file_name = f"{file_num}.a"
+        output_file_name = f"test/{file_num}.a"
     elif input_type == "I":
         text = input("Enter brackets: ")
         result = find_mismatch(text)
@@ -40,7 +40,7 @@ def main():
         input_file_name = f"test/{file_num}"
         path = Path(input_file_name)
         if path.is_file():
-            output_file_name = f"{file_num}.a"
+            output_file_name = f"test/{file_num}.a"
         else:
             print("Invalid input type.")
             return
