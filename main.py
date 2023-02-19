@@ -41,7 +41,6 @@ def main():
         text = input_file.read().strip()
         mismatch = find_mismatch(text)
         output_file.write(str(mismatch) + "\n")
-        print(mismatch)
 
 if __name__ == "__main__":
     main()
