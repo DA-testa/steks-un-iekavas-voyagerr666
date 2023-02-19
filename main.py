@@ -25,13 +25,14 @@ def find_mismatch(text):
         return "Success"
 
 def main():
-    #input_type = input()    #"Enter F to use test files, or I to input brackets: "
+    input_type = input()    #"Enter F to use test files, or I to input brackets: "
+    print(input_type == "I")
     if input_type == "F":
-        #file_num = input()  #"Enter test file number (0-5): "
+        file_num = input()  #"Enter test file number (0-5): "
         input_file_name = f"test/{file_num}"
         output_file_name = f"test/{file_num}.a"
     elif input_type == "I":
-        #text = input()  #"Enter brackets: "
+        text = input()  #"Enter brackets: "
         result = find_mismatch(text)
         print(result)
         return
