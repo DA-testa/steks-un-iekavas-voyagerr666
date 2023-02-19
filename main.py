@@ -52,4 +52,6 @@ def main():
         print(mismatch)
 
 if __name__ == "__main__":
-    main()
+    input_ = input()
+    print(input_)
+ #   main()
