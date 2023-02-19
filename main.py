@@ -26,7 +26,7 @@ def find_mismatch(text):
 def main():
     input_type = input("Enter F to use test files, or I to input brackets: ")
     if input_type.isdigit():
-        file_num = int(input_type)
+        file_num = str(input_type)
         input_file_name = f"test/{file_num}"
         output_file_name = f"{file_num}.a"
     elif input_type == "F":
