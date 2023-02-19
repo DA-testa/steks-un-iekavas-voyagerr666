@@ -26,7 +26,7 @@ def find_mismatch(text):
 
 def main():
     input_type = input()    #"Enter F to use test files, or I to input brackets: "
-    print(input_type == "I ")
+    print(input_type == "I\n")
     if input_type == "F":
         file_num = input()  #"Enter test file number (0-5): "
         input_file_name = f"test/{file_num}"
